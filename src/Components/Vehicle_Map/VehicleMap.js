@@ -25,7 +25,7 @@ const App = () => {
     });
 
     // add navigation control (zoom buttons)
-    map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
+    map.addControl(new mapboxgl.NavigationControl(), "top-right");
 
     map.on("load", () => {
       // add the data source for new a feature collection with no features
@@ -43,7 +43,7 @@ const App = () => {
         type: "symbol",
         layout: {
           // full list of icons here: https://labs.mapbox.com/maki-icons
-          "icon-image": "bakery-15", // this will put little croissants on our map
+          "icon-image": "car-15", // this will put little croissants on our map
           "icon-padding": 0,
           "icon-allow-overlap": true
         }

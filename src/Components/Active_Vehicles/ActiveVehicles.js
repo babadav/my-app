@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../src/scss/welcome-admin.scss";
+import fetchFakeData from "../../Data/fetchFakeData";
 
 const ActiveVehicles = () => {
   return (

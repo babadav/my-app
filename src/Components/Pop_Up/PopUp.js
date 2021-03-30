@@ -1,12 +1,18 @@
 import React from "react";
 
-const Popup = ({ feature }) => {
-  const { id, name, description } = feature.properties;
 
+const Popup = ({ feature }) => {
+  const { id, name, description, chargeLevel } = feature.properties;
+
+  console.log(feature.properties)
+
+  console.log(feature)
   return (
-    <div id={`popup-${id}`}>
-      <h3>{name}</h3>
-      {description}
+    <div id={`popup-${feature.properties.id}`}>
+      <h3>{feature.properties.name}</h3>
+      {feature.properties.description}
+      <div className={'popup-charge-level'}>
+      Charge Level: {feature.properties.chargeLevel}%</div>
     </div>
   );
 };

@@ -25,8 +25,9 @@
         },
         properties: {
           id,
-          name: `Random Point #${id}`,
-          description: `description for Random Point #${id}`,
+          name: `Vehicle #${id}`,
+          description: `Vehicle #${id} is currently active `,
+          chargeLevel: Math.floor(Math.random() * 30) + 1
         },
       });
     }

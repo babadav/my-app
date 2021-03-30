@@ -1,9 +1,25 @@
 .map-container {
-    width: 100vw;
-    height: 400px;
-    position: absolute;
-    
-    bottom: 0;
-    left: 0;
-    right: 0;
+  width: 100vw;
+  height: 400px;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .mapboxgl-popup {
+    .mapboxgl-popup-tip {
+        border-top-color: #000;
+        opacity: 0.5;
+    }
+    .mapboxgl-popup-content {
+      background-color: #000;
+      opacity: 0.5;
+    }
+
+    .mapboxgl-popup-close-button {
+      background-color: #fff;
+      opacity: 0.5;
+    }
+  }
 }
