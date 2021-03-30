@@ -10,7 +10,7 @@ import '../../scss/vehicle-map.scss'
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
-const App = () => {
+const VehicleMap = () => {
   const mapContainerRef = useRef(null);
   const popUpRef = useRef(new mapboxgl.Popup({ offset: 15 }));
 
@@ -50,7 +50,7 @@ const App = () => {
       });
     });
 
-    map.on("moveend", async () => {
+    map.on("load", async () => {
       // get new center coordinates
       const { lng, lat } = map.getCenter();
       // fetch new data
@@ -58,6 +58,7 @@ const App = () => {
       // update "random-points-data" source with new data
       // all layers that consume the "random-points-data" data source will be updated automatically
       map.getSource("random-points-data").setData(results);
+      console.log(results,'results')
     });
 
     // change cursor to pointer when user hovers over a clickable feature
@@ -94,4 +95,4 @@ const App = () => {
   return <div className="map-container" ref={mapContainerRef} />;
 };
 
-export default App;
+export default VehicleMap;
