@@ -1,0 +1,21 @@
+.module__active-vehicles {
+  &__header {
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__vehicle-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+
+  }
+  &__vehicle-block {
+  display: flex;
+  width: 12rem;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+}

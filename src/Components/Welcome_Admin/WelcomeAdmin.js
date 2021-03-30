@@ -7,7 +7,7 @@ const WelcomeAdmin = () => {
     <>
         <div className={'module__welcome-admin'}>
             <div className={`module__welcome-admin__text`}>
-                Welcome ADMIN NAME
+                Welcome Admin
             </div>
         </div>
     </>
