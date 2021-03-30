@@ -1,22 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import WelcomeAdmin from './Components/Welcome_Admin/WelcomeAdmin'
+import ActiveVehicles from './Components/Active_Vehicles/ActiveVehicles'
+import VehicleMap from './Components/Vehicle_Map/VehicleMap'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <WelcomeAdmin />
+        <ActiveVehicles />
+        <VehicleMap />
       </header>
     </div>
   );
