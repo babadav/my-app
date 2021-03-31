@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../src/scss/welcome-admin.scss";
-import fetchFakeData from "../../Data/fetchFakeData";
 import '../../scss/active-vehicles.scss'
 
 const ActiveVehicles = ({data}) => {
