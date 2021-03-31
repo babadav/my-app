@@ -14,7 +14,7 @@
  */
  const fetchFakeData = centerCoordinates => {
     const newFeaturesList = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 12; i++) {
       const id = i;
       const { longitude, latitude } = getRandomCoordinate(centerCoordinates);
       newFeaturesList.push({
@@ -26,8 +26,8 @@
         properties: {
           id,
           name: `Vehicle #${id}`,
-          description: `Vehicle #${id} is currently active `,
-          chargeLevel: Math.floor(Math.random() * 30) + 1
+          description: `Vehicle ${id} is currently active `,
+          chargeLevel: Math.floor(Math.random() * 100) + 1
         },
       });
     }

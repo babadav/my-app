@@ -3,10 +3,6 @@ import React from "react";
 
 const Popup = ({ feature }) => {
   const { id, name, description, chargeLevel } = feature.properties;
-
-  console.log(feature.properties)
-
-  console.log(feature)
   return (
     <div id={`popup-${feature.properties.id}`}>
       <h3>{feature.properties.name}</h3>
