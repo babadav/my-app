@@ -1,26 +1,23 @@
 import React from "react";
 import "../../../src/scss/welcome-admin.scss";
-import '../../scss/active-vehicles.scss'
+import "../../scss/active-vehicles.scss";
 
-const ActiveVehicles = ({data}) => {
+const ActiveVehicles = ({ data }) => {
   let vehicleData = [];
-  
+
   vehicleData = data;
 
-  console.log(data)
   const setVehicleGrid = () => {
-    
-    console.log(vehicleData, "vdata");
-
     if (!vehicleData.length) {
-      return <>Loading...</>
+      return <>Loading...</>;
     }
- 
+
     return vehicleData.map((item, index) => {
       return (
         <div className={`module__active-vehicles__vehicle-block`}>
           <div className={`module__active-vehicles__vehicle-block__vehicle`}>
-            {item.properties.name} has {item.properties.chargeLevel}% charge remaining
+            {item.properties.name} has {item.properties.chargeLevel}% charge
+            remaining
           </div>
         </div>
       );

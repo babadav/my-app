@@ -68,7 +68,6 @@ const App = () => {
       if (results.features) {
         // vehicleData = results.features
         setData(results.features);
-        console.log(vehicleData, "i suck");
       }
     });
 
@@ -102,7 +101,6 @@ const App = () => {
     // clean up on unmount
     return () => map.remove();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  console.log(vehicleData, "dat");
   return (
     <>
       <div className="App">

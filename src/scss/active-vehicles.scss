@@ -8,14 +8,12 @@
   &__vehicle-grid {
     display: flex;
     flex-wrap: wrap;
-
-
   }
   &__vehicle-block {
-  display: flex;
-  width: 12rem;
-  justify-content: space-around;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
+    display: flex;
+    width: 12rem;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
 }
