@@ -66,8 +66,8 @@ const App = () => {
       map.getSource("random-points-data").setData(results);
 
       if(results.features) {
-        vehicleData.push(results.features)
-        console.log(vehicleData)
+        vehicleData = results.features
+        console.log(vehicleData,'i suck')
       }
       
     });

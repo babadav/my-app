@@ -3,20 +3,21 @@ import "../../../src/scss/welcome-admin.scss";
 import fetchFakeData from "../../Data/fetchFakeData";
 import '../../scss/active-vehicles.scss'
 
-const ActiveVehicles = (data) => {
+const ActiveVehicles = ({data}) => {
   let vehicleData = [];
   
-  vehicleData = data.data;
-  
+  vehicleData = data;
 
+  console.log(data)
   const setVehicleGrid = () => {
+    
     console.log(vehicleData, "vdata");
+
     if (!vehicleData.length) {
-      return 
+      return <></>
     }
  
-    return vehicleData[0].map((item, index) => {
-      
+    return vehicleData.map((item, index) => {
       return (
         <div className={`module__active-vehicles__vehicle-block`}>
           <div className={`module__active-vehicles__vehicle-block__vehicle`}>
