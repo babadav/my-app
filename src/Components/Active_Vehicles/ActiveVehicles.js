@@ -14,7 +14,7 @@ const ActiveVehicles = ({data}) => {
     console.log(vehicleData, "vdata");
 
     if (!vehicleData.length) {
-      return <></>
+      return <>Loading...</>
     }
  
     return vehicleData.map((item, index) => {

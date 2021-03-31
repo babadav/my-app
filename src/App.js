@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 
 import fetchFakeData from "./Data/fetchFakeData";
@@ -19,6 +19,8 @@ const App = () => {
   const mapContainerRef = useRef(null);
   const popUpRef = useRef(new mapboxgl.Popup({ offset: 15 }));
   let vehicleData = [];
+
+  const [data, setData] = useState([]);
 
   // initialize map when component mounts
   useEffect(() => {
@@ -66,7 +68,8 @@ const App = () => {
       map.getSource("random-points-data").setData(results);
 
       if(results.features) {
-        vehicleData = results.features
+        // vehicleData = results.features
+        setData(results.features)
         console.log(vehicleData,'i suck')
       }
       
@@ -111,7 +114,7 @@ const App = () => {
       <div className="App">
       <header className="App-header">
         <WelcomeAdmin />
-        <ActiveVehicles data={vehicleData}  />
+        <ActiveVehicles data={data}  />
         
       </header>
     </div>
