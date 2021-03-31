@@ -2,16 +2,14 @@ import ReactDOM from "react-dom";
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 
-import fetchFakeData from "./Data/fetchFakeData";
+import fetchFakeData from "./Components/Data/fetchFakeData";
 import Popup from "./Components/Pop_Up/PopUp";
 
-
-import WelcomeAdmin from './Components/Welcome_Admin/WelcomeAdmin'
-import ActiveVehicles from './Components/Active_Vehicles/ActiveVehicles'
-
+import WelcomeAdmin from "./Components/Welcome_Admin/WelcomeAdmin";
+import ActiveVehicles from "./Components/Active_Vehicles/ActiveVehicles";
 
 import "../src/scss/vehicle-map.scss";
-import './App.css';
+import "./App.css";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
@@ -67,12 +65,11 @@ const App = () => {
       // all layers that consume the "random-points-data" data source will be updated automatically
       map.getSource("random-points-data").setData(results);
 
-      if(results.features) {
+      if (results.features) {
         // vehicleData = results.features
-        setData(results.features)
-        console.log(vehicleData,'i suck')
+        setData(results.features);
+        console.log(vehicleData, "i suck");
       }
-      
     });
 
     // change cursor to pointer when user hovers over a clickable feature
@@ -105,22 +102,18 @@ const App = () => {
     // clean up on unmount
     return () => map.remove();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  console.log(vehicleData,'dat')
+  console.log(vehicleData, "dat");
   return (
-    
     <>
-      
-
       <div className="App">
-      <header className="App-header">
-        <WelcomeAdmin />
-        <ActiveVehicles data={data}  />
-        
-      </header>
-    </div>
-    <>
-      <div className="map-container" ref={mapContainerRef} />
-    </>
+        <header className="App-header">
+          <WelcomeAdmin />
+          <ActiveVehicles data={data} />
+        </header>
+      </div>
+      <>
+        <div className="map-container" ref={mapContainerRef} />
+      </>
     </>
   );
 };
